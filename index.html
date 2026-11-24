@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming Hub Tanzania</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d18;color:white;font-family:Arial,sans-serif}
+header{background:#111c30;padding:22px;text-align:center;border-bottom:2px solid #00e5a0}
+header h1{color:#00e5a0;margin:0}
+nav{display:flex;justify-content:center;gap:20px;padding:18px;flex-wrap:wrap}
+a{color:#00e5a0;text-decoration:none}
+.hero{text-align:center;padding:65px 15px;background:linear-gradient(135deg,#102d42,#080d18)}
+.hero h2{font-size:34px}
+button{background:#00e5a0;color:#06121a;border:0;padding:12px 20px;border-radius:8px;font-weight:bold;cursor:pointer}
+section{padding:30px 18px;max-width:1000px;margin:auto}
+h2{color:#00e5a0}
+input{padding:13px;width:100%;border-radius:8px;border:0;margin:10px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#142239;padding:20px;border-radius:12px;border:1px solid #263d5a}
+.card h3{color:#00e5a0}
+footer{text-align:center;padding:25px;background:#111c30;color:#aaa}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🎮 GAMING HUB TANZANIA</h1>
+<p>Play • Compete • Explore</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#games">Games</a>
+<a href="#vpn">VPN</a>
+<a href="#tournaments">Tournaments</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>WELCOME TO GAMING HUB 🇹🇿</h2>
+<p>Nyumbani kwa gamers wa Tanzania!</p>
+<a href="#games"><button>Explore Games</button></a>
+</div>
+
+<section id="games">
+<h2>🎮 Popular Games</h2>
+<input id="search" placeholder="Search games..." oninput="searchGames()">
+<div class="grid" id="gameList">
+<div class="card"><h3>Dream League Soccer</h3><p>Football gaming experience.</p><a href="https://play.google.com/store/search?q=dream%20league%20soccer&c=apps">Find Game</a></div>
+<div class="card"><h3>GTA</h3><p>Explore open-world games.</p><a href="https://store.steampowered.com/">Explore</a></div>
+<div class="card"><h3>PPSSPP</h3><p>Enjoy PSP gaming.</p><a href="https://www.ppsspp.org/">Official Website</a></div>
+<div class="card"><h3>FIFA</h3><p>Football gaming.</p><a href="https://www.ea.com/games/ea-sports-fc">Explore</a></div>
+</div>
+</section>
+
+<section id="vpn">
+<h2>🔐 VPN Zone</h2>
+<div class="card">
+<h3>VPN Information</h3>
+<p>Discover VPN services and learn about online privacy.</p>
+<a href="https://protonvpn.com/">Explore Proton VPN</a>
+</div>
+</section>
+
+<section id="tournaments">
+<h2>🏆 Gaming Tournaments</h2>
+<div class="card">
+<h3>Coming Soon!</h3>
+<p>Hapa tutakuwa na mashindano ya gamers wa Tanzania.</p>
+<p>Stay tuned!</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Gaming Hub Tanzania</p>
+<p>Built for gamers 🇹🇿</p>
+</footer>
+
+<script>
+function searchGames(){
+let q=document.getElementById("search").value.toLowerCase();
+document.querySelectorAll("#gameList .card").forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
+});
+}
+</script>
+
+</body>
+</html>
